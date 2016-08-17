@@ -24,6 +24,10 @@ export class AppComponent {
 
     this.pokedexService.getPokemon(this.pokemon.length, 9)
       .then(pokemon => {
+        pokemon = pokemon.map(p => {
+          p.imageLoaded = false;
+          return p;
+        });
         this.pokemon = this.pokemon.concat(pokemon);
         this.isLoading = false;
         this.error = false;

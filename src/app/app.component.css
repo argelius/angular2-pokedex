@@ -22,6 +22,12 @@
 .pokedex-pokemon-sprite {
   width: 96px;
   height: 96px;
+  transition: opacity 0.2s linear;
+  opacity: 1;
+}
+
+.pokedex-pokemon-sprite.hidden {
+  opacity: 0;
 }
 
 .pokedex-pokemon-name {

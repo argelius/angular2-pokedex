@@ -9,7 +9,7 @@
     <div class="pokedex-pokemon-id">
       #{{ p.id}}
     </div>
-    <img class="pokedex-pokemon-sprite" [attr.src]="p.sprite">
+    <img [ngClass]="{'hidden': !p.imageLoaded}" class="pokedex-pokemon-sprite" (load)="p.imageLoaded = true" [attr.src]="p.sprite">
     <div class="pokedex-pokemon-name">
       {{ p.name | capitalize }}
     </div>
