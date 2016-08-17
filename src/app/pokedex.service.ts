@@ -4,7 +4,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class PokedexService {
-  private baseUrl: string = 'http://pokeapi.co/api/v2/pokemon/';
+  private baseUrl: string = 'https://pokeapi.co/api/v2/pokemon/';
   private baseSpriteUrl: string = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
   constructor(private http: Http) { }
